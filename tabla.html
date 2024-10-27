@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla del formulario</title>
+    <script defer src="./JS/funciones.js"></script>
+</head>
+<body>
+    <ul>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="tabla.html">Tabla</a></li>
+        <li><a href="menuNavegacion.html">Menú de navegación</a></li>
+        <li><a href="preguntasFrecuentes.html">Preguntas más frecuentes</a></li>
+        <li><a href="listaOrdenada.html">Lista ordenada</a></li>
+    </ul>
+    <br>
+    
+    <h1>Tabla del formulario</h1>
+    <table border="1">
+        <tr>
+            <th>Sección</th>
+            <th>Información</th>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td><input type="text" name="nombre"></td>
+        </tr>
+        <tr>
+            <td>Apellidos</td>
+            <td><input type="text" name="apellidos"></td>
+        </tr>
+        <tr>
+            <td>Teléfono</td>
+            <td><input type="tel" name="telefono"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Sexo</td>
+            <td>
+                <input type="radio" name="sexo" value="masc"> Masculino
+                <input type="radio" name="sexo" value="feme"> Femenino
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <input type="text" id="filtro" placeholder="Filtrar el nombre">
+    <table id="tabla-rellena" border="1">
+        <!--El thead sirve para que el contenido que haya dentro se pomga de cabecera en la tabla que hayas creado-->
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Sexo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+
+        <!--El tbody sirve para agrupar todos los usuarios en la tabla-->
+        <tbody>
+            <!-- Aquí se llenaran las filas cuando tu lo rellenes y envies la tabla -->
+        </tbody>
+    </table>
+
+</body>
+</html>

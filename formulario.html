@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="formulario.html">Formulario</a></li>
+        <li><a href="tabla.html">Tabla</a></li>
+        <li><a href="menuNavegacion.html">Menú de navegación</a></li>
+        <li><a href="preguntasFrecuentes.html">Preguntas más frecuentes</a></li>
+        <li><a href="listaOrdenada.html">Lista ordenada</a></li>
+    </ul>
+    <br>
+
+    <h1>Formulario</h1>
+    <form method="post" action="/" >
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required>
+        <br>
+        <br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" required>
+        <br>
+        <br>
+        
+        <label for="contrasenia">Contraseña:</label>
+        <input type="password" name="password" required>
+        <br>
+        <br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" name="telefono" pattern="[0-9]{9}" required>
+        <br>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+        <br>
+        <br>
+
+        <label for="sexo">Sexo:</label>
+        <br>
+        <input type="radio" name="sexo" value="masc" required>Masculino 
+        <br>
+        <input type="radio" name="sexo" value="fem" required>Femenino
+        <br>
+        <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
