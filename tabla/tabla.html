@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla del formulario</title>
-    <script defer src="./JS/funciones.js"></script>
+    <script defer type="module" src="../JS/funciones.js"></script>
+    <script defer type="module" src="../JS/nav.js"></script>
+    <script defer type="module" src="./tabla.js"></script>
+    <link rel="stylesheet" href="tabla.css">
 </head>
 <body>
-    <ul>
-        <li><a href="formulario.html">Formulario</a></li>
-        <li><a href="tabla.html">Tabla</a></li>
-        <li><a href="menuNavegacion.html">Menú de navegación</a></li>
-        <li><a href="preguntasFrecuentes.html">Preguntas más frecuentes</a></li>
-        <li><a href="listaOrdenada.html">Lista ordenada</a></li>
-    </ul>
+    
     <br>
     
     <h1>Tabla del formulario</h1>
@@ -50,7 +47,6 @@
     <br>
     <input type="text" id="filtro" placeholder="Filtrar el nombre">
     <table id="tabla-rellena" border="1">
-        <!--El thead sirve para que el contenido que haya dentro se pomga de cabecera en la tabla que hayas creado-->
         <thead>
             <tr>
                 <th>Nombres</th>
@@ -61,11 +57,9 @@
                 <th>Acciones</th>
             </tr>
         </thead>
-
-
-        <!--El tbody sirve para agrupar todos los usuarios en la tabla-->
+    
         <tbody>
-            <!-- Aquí se llenaran las filas cuando tu lo rellenes y envies la tabla -->
+           
         </tbody>
     </table>
 
