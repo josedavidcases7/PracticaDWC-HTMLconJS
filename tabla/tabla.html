@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tabla del formulario</title>
+    <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script defer src="../JS/AyaxMethods/_js.js"></script>
+    <script defer src="../JS/RepositorioQuerys/llamadasQuerys.js"></script>
     <script defer type="module" src="../JS/funciones.js"></script>
     <script defer type="module" src="../JS/nav.js"></script>
     <script defer type="module" src="./tabla.js"></script>
-    <link rel="stylesheet" href="tabla.css">
-</head>
-<body>
-    
-    <br>
-    
+    <link rel="stylesheet" href="tabla.css" />
+  </head>
+  <body>
+    <br />
+
     <h1>Tabla del formulario</h1>
     <table border="1">
-        <tr>
-            <th>Sección</th>
-            <th>Información</th>
-        </tr>
-        <tr>
-            <td>Nombre</td>
-            <td><input type="text" name="nombre"></td>
-        </tr>
-        <tr>
-            <td>Apellidos</td>
-            <td><input type="text" name="apellidos"></td>
-        </tr>
-        <tr>
-            <td>Teléfono</td>
-            <td><input type="tel" name="telefono"></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input type="email" name="email"></td>
-        </tr>
-        <tr>
-            <td>Sexo</td>
-            <td>
-                <input type="radio" name="sexo" value="masc"> Masculino
-                <input type="radio" name="sexo" value="feme"> Femenino
-            </td>
-        </tr>
+      <tr>
+        <th>Sección</th>
+        <th>Información</th>
+      </tr>
+      <tr>
+        <td>Nombre</td>
+        <td><input type="text" name="nombre" /></td>
+      </tr>
+      <tr>
+        <td>Apellidos</td>
+        <td><input type="text" name="apellidos" /></td>
+      </tr>
+      <tr>
+        <td>Teléfono</td>
+        <td><input type="tel" name="telefono" /></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" name="email" /></td>
+      </tr>
+      <tr>
+        <td>Sexo</td>
+        <td>
+          <input type="radio" name="sexo" value="masc" /> Masculino
+          <input type="radio" name="sexo" value="feme" /> Femenino
+        </td>
+      </tr>
     </table>
-    <br>
-    <br>
-    <input type="text" id="filtro" placeholder="Filtrar el nombre">
-    <table id="tabla-rellena" border="1">
-        <thead>
-            <tr>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Teléfono</th>
-                <th>Email</th>
-                <th>Sexo</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-    
-        <tbody>
-           
-        </tbody>
-    </table>
+    <br />
+    <br />
+    <input type="text" id="filtro" placeholder="Filtrar el nombre" />
 
-</body>
+    <div id="modal" class="modal">
+      <div class="modal-contenido">
+        <button id="cerrarModal" class="cerrar">&times;</button>
+        <h2 id="tituloModal">Insertar Alumno</h2>
+        <form id="formularioAlumno">
+          <label for="id">Id:</label>
+          <input type="text" id="id" name="id"/>
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" name="apellidos" required />
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="sexo">Sexo:</label>
+          <select id="sexo" name="sexo" required>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select>
+
+          <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+          <input
+            type="date"
+            id="fechaNacimiento"
+            name="fechaNacimiento"
+            required
+          />
+
+          <button id="btnGuardarAlumno">Guardar</button>
+        </form>
+      </div>
+    </div>
+
+    <button id="btnAddAlumno">Añadir alumno</button>
+    <table id="tabla-rellena" border="1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+          <th>Sexo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTabla"></tbody>
+    </table>
+  </body>
 </html>
